@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="careers.css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <!-- <span>Tel Nr:</span><span>86421086</span> -->
+
+
+    <% for (let i = 0; i < careers.length; i++) { %> 
+        <div>
+            <div><%= careers[i].title%></div>
+            <div><%= careers[i].description %></div>
+            <div><%= careers[i].salary %></div>
+        </div>
+        <% } %>
+
+        <% careers.forEach((careers) => { %>
+                <div><%= careers.title%></div>
+                <div><%= careers.description %></div>
+                <div><%= careers.salary %></div>
+            <% }) %>
+</body>
+</html>
